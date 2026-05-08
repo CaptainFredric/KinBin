@@ -19,7 +19,9 @@ const isBrowser = () => typeof window !== "undefined";
 export const makeId = () =>
   isBrowser() && "randomUUID" in crypto
     ? crypto.randomUUID()
-    : `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    : `${Date.now()}-${Array.from(crypto.getRandomValues(new Uint32Array(2)))
+        .map((value) => value.toString(16))
+        .join("")}`;
 
 const saveBinders = (binders: CareBinder[]) => {
   if (!isBrowser()) {

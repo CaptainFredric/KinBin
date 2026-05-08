@@ -1,8 +1,9 @@
 import { CareBinder } from "@/types/care";
+import { getTodayIsoDate } from "@/lib/dates";
 
 const now = new Date();
 const isoNow = now.toISOString();
-const todayIso = now.toISOString().slice(0, 10);
+const todayIso = getTodayIsoDate();
 const oneHourFromNow = new Date(now.getTime() + 60 * 60 * 1000).toISOString();
 
 export const sampleBinders: CareBinder[] = [

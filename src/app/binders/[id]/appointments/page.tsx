@@ -39,7 +39,7 @@ export default function AppointmentsPage({ params }: { params: { id: string } })
           {[
             ["title", "Title"],
             ["providerName", "Provider"],
-            ["startsAt", "Date/time (ISO)"] ,
+            ["startsAt", "Date/time (ISO)"],
             ["location", "Location"],
             ["transportationPlan", "Transportation plan"],
             ["questionsToAsk", "Questions to ask"],
@@ -57,7 +57,7 @@ export default function AppointmentsPage({ params }: { params: { id: string } })
               />
             </label>
           ))}
-          <button type="submit" className="md:col-span-2 rounded-full bg-teal-900 px-4 py-2 text-white">
+          <button type="submit" className="rounded-full bg-teal-900 px-4 py-2 text-white md:col-span-2">
             Save appointment
           </button>
         </form>

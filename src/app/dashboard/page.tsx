@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 
+import { getTodayIsoDate } from "@/lib/dates";
 import { getMissingInfoItems } from "@/lib/handoff";
 import { useCareBinders } from "@/store/use-care-binders";
 
-const today = new Date().toISOString().slice(0, 10);
+const today = getTodayIsoDate();
 
 export default function DashboardPage() {
   const { binders, loaded, deleteBinder } = useCareBinders();

@@ -63,7 +63,7 @@ export const downloadHandoffPdf = (binder: CareBinder) => {
 
   doc.text(handoff.profile, 14, 30, { maxWidth: 180 });
   doc.text(`Current Medications\n${handoff.medications}`, 14, 78, { maxWidth: 180 });
-  doc.text(`Today's Appointments\n${handoff.appointments}`, 14, 126, {
+  doc.text(`Upcoming Appointments\n${handoff.appointments}`, 14, 126, {
     maxWidth: 180,
   });
   doc.addPage();

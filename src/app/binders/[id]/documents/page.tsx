@@ -53,7 +53,7 @@ export default function DocumentsPage({ params }: { params: { id: string } }) {
               />
             </label>
           ))}
-          <button type="submit" className="md:col-span-2 rounded-full bg-teal-900 px-4 py-2 text-white">
+          <button type="submit" className="rounded-full bg-teal-900 px-4 py-2 text-white md:col-span-2">
             Save document metadata
           </button>
         </form>

@@ -4,10 +4,11 @@ import { useState } from "react";
 
 import { BinderShell } from "@/components/binders/binder-shell";
 import { useBinder } from "@/components/binders/use-binder";
+import { getTodayIsoDate } from "@/lib/dates";
 
 const blankNote = {
   id: "",
-  noteDate: new Date().toISOString().slice(0, 10),
+  noteDate: getTodayIsoDate(),
   mood: "",
   meals: "",
   sleep: "",
@@ -60,7 +61,7 @@ export default function NotesPage({ params }: { params: { id: string } }) {
               />
             </label>
           ))}
-          <button type="submit" className="md:col-span-2 rounded-full bg-teal-900 px-4 py-2 text-white">
+          <button type="submit" className="rounded-full bg-teal-900 px-4 py-2 text-white md:col-span-2">
             Save note
           </button>
         </form>

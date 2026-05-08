@@ -62,7 +62,7 @@ export default function HandoffPage({ params }: { params: { id: string } }) {
         <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.profile}</pre>
         <h3 className="mt-5 text-xl font-semibold">Current medications</h3>
         <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.medications}</pre>
-        <h3 className="mt-5 text-xl font-semibold">Today&apos;s schedule</h3>
+        <h3 className="mt-5 text-xl font-semibold">Upcoming schedule</h3>
         <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.appointments}</pre>
         <h3 className="mt-5 text-xl font-semibold">Recent notes</h3>
         <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.notes}</pre>

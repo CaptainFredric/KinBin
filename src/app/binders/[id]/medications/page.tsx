@@ -71,7 +71,7 @@ export default function MedicationsPage({ params }: { params: { id: string } }) 
             />
             Active medication
           </label>
-          <button type="submit" className="md:col-span-2 rounded-full bg-teal-900 px-4 py-2 text-white">
+          <button type="submit" className="rounded-full bg-teal-900 px-4 py-2 text-white md:col-span-2">
             Save medication
           </button>
         </form>

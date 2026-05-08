@@ -20,6 +20,7 @@ import {
   upsertTask,
   updateProfile,
 } from "@/lib/storage";
+import { getIsoDateDaysAgo, getTodayIsoDate } from "@/lib/dates";
 import {
   Appointment,
   CareBinder,
@@ -51,7 +52,7 @@ export const useCareBinders = () => {
         const item: CareNote = {
           id: note.id || makeId(),
           careRecipientId: note.careRecipientId || "",
-          noteDate: note.noteDate || new Date().toISOString().slice(0, 10),
+          noteDate: note.noteDate || getTodayIsoDate(),
           mood: note.mood || "",
           meals: note.meals || "",
           sleep: note.sleep || "",
@@ -138,10 +139,8 @@ export const useCareBinders = () => {
           careRecipientId: binderId,
           packetType,
           createdAt: now(),
-          dateRangeStart: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)
-            .toISOString()
-            .slice(0, 10),
-          dateRangeEnd: new Date().toISOString().slice(0, 10),
+          dateRangeStart: getIsoDateDaysAgo(7),
+          dateRangeEnd: getTodayIsoDate(),
         };
 
         setBinders(addHandoffPacket(binders, binderId, packet));
