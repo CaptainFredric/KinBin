@@ -59,15 +59,30 @@ export default function HandoffPage({ params }: { params: { id: string } }) {
 
       <section className="rounded-2xl bg-white p-6 shadow-sm">
         <h2 className="text-2xl font-semibold">Emergency profile</h2>
-        <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.profile}</pre>
+        <p className="mt-1 text-xs uppercase tracking-wide text-teal-500">Generated: {handoff.generatedAt}</p>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.profile}
+        </pre>
         <h3 className="mt-5 text-xl font-semibold">Current medications</h3>
-        <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.medications}</pre>
-        <h3 className="mt-5 text-xl font-semibold">Upcoming schedule</h3>
-        <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.appointments}</pre>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.medications}
+        </pre>
+        <h3 className="mt-5 text-xl font-semibold">Upcoming appointments</h3>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.appointments}
+        </pre>
         <h3 className="mt-5 text-xl font-semibold">Recent notes</h3>
-        <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.notes}</pre>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.notes}
+        </pre>
         <h3 className="mt-5 text-xl font-semibold">Open tasks</h3>
-        <pre className="mt-2 overflow-auto whitespace-pre-wrap text-sm text-teal-800">{handoff.tasks}</pre>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.tasks}
+        </pre>
+        <h3 className="mt-5 text-xl font-semibold">Document checklist</h3>
+        <pre className="mt-2 overflow-auto whitespace-pre-wrap rounded-xl bg-[#f4f1ea] p-3 text-sm text-teal-800">
+          {handoff.documents}
+        </pre>
         <p className="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs text-amber-900">
           {disclaimer}
         </p>
